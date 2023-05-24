@@ -4,7 +4,8 @@
   "description": "cmd: ``git clone git@github.com:LadyJessie19/npm-ts-cakepan.git``",
   "main": "index.js",
   "scripts": {
-    "start": "tsnd src/app.ts"
+    "start": "tsnd src/app.ts",
+    "yup": "tsnd src/yup.ts"
   },
   "repository": {
     "type": "git",
