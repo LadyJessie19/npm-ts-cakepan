@@ -1,5 +1,4 @@
 /* This section creates the conection between the database(mongodb) with the project */
-
 import { MongoClient } from 'mongodb'
 
 const url = "mongodb+srv://jessie:jessie@first.buahyq8.mongodb.net/"
