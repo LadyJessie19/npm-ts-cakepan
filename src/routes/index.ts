@@ -8,7 +8,7 @@ Routes.get('/route', (req:Request, res:Response) => {
 
 })
 
-Routes.get('/route:id', (req:Request, res:Response) => {
+Routes.get('/route/:id', (req:Request, res:Response) => {
 
 })
 
@@ -16,11 +16,14 @@ Routes.post('/route', async (req: Request, res: Response) => {
    
   })
 
-Routes.put('/route:id', async (req: Request, res: Response) => {
+Routes.put('/route/:id', async (req: Request, res: Response) => {
+   
+  })
+Routes.patch('/route/:id', async (req: Request, res: Response) => {
    
   })
 
-Routes.delete('/route:id', async (req: Request, res: Response) => {
+Routes.delete('/route/:id', async (req: Request, res: Response) => {
    
   })
 

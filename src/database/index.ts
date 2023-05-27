@@ -10,5 +10,5 @@ const database = client.db(db).collection(col)
 
 export default database
 
-client.close()
+// client.close()
 // eof
