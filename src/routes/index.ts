@@ -7,28 +7,31 @@ import { SomethingCon } from "../app/controllers";
 const Routes = Router()
 const Domain = facSomethingRoute()
 
-Routes.post('/route', Domain.createCon.bind(SomethingCon))
+const path = '/route'
+const pathId = '/route/:id'
 
-Routes.get('/route', (req:Request, res:Response) => {
+Routes.post(path, Domain.createCon.bind(SomethingCon))
+
+Routes.get(path, (req:Request, res:Response) => {
   return Domain.findAllCon(req, res)
 })
 
-Routes.get('/route/:id', (req:Request, res:Response) => {
+Routes.get(pathId, (req:Request, res:Response) => {
 
 })
 
-Routes.post('/route', async (req: Request, res: Response) => {
+Routes.post(path, async (req: Request, res: Response) => {
    
   })
 
-Routes.put('/route/:id', async (req: Request, res: Response) => {
+Routes.put(pathId, async (req: Request, res: Response) => {
    
   })
-Routes.patch('/route/:id', async (req: Request, res: Response) => {
+Routes.patch(pathId, async (req: Request, res: Response) => {
    
   })
 
-Routes.delete('/route/:id', async (req: Request, res: Response) => {
+Routes.delete(pathId, async (req: Request, res: Response) => {
    
   })
 
