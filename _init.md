@@ -1,11 +1,11 @@
-# Typescript 
+# Initiate a new project
 
 ## Começar o projeto node:
 1 - npm init -y
 _package.json_
 
 ## Instalar as libs:
-2 - npm i mongodb express
+2 - npm i mongoose express
 
 ## Instalar as tipagens:
 3 - npm i typescript @types/express @types/node -D
@@ -20,4 +20,5 @@ _tsconfig.json_
 
 ## Add ao package.json:
 
-6 - "start": "tsnd src/app.ts"
+6 - "dev": "tsnd src/app.ts" 
+_npm run dev_

@@ -2,9 +2,9 @@
   "name": "npm-ts-cakepan",
   "version": "1.0.0",
   "description": "cmd: ``git clone git@github.com:LadyJessie19/npm-ts-cakepan.git``",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "tsnd src/app.ts",
+    "dev": "tsnd src/app.ts",
     "yup": "tsnd src/yup.ts"
   },
   "repository": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/LadyJessie19/npm-ts-cakepan.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jessica Moura",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LadyJessie19/npm-ts-cakepan/issues"
@@ -21,7 +21,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.1",
     "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {

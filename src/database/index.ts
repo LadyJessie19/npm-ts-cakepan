@@ -1,14 +1,26 @@
-/* This section creates the conection between the database(mongodb) with the project */
-import { MongoClient } from 'mongodb'
+import mongoose from "mongoose"
 
-const url = "mongodb+srv://jessie:jessie@first.buahyq8.mongodb.net/"
-const db = ""
-const col = ""
+const url = "mongodb+srv://jessie:jessie@first.buahyq8.mongodb.net/routes"
+/* Add after "/" any name to create the collection in your mongoDB database */
 
-const client = new MongoClient(url)
-const database = client.db(db).collection(col)
+export async function initializeDatabase() {
+  mongoose.connection
+    .on("error", (error) => {
+      console.log("ERROR: connection to mongo failed: ", error)
+    })
+    .on("close", () => {
+      console.log("Connection to mongo ended")
+    })
+    .once("open", () => {
+      console.log("Connection to mongo")
+    })
 
-export default database
+   await mongoose.connect(url)
+}
 
-// client.close()
+export function disconnectDatabase() {
+  mongoose.disconnect()
+}
+
+
 // eof

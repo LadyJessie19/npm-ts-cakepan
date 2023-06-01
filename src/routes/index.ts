@@ -2,37 +2,43 @@
 
 import { Request, Response, Router } from "express";
 import { facSomethingRoute } from "../app/services/factories";
-import { SomethingCon } from "../app/controllers";
 
 const Routes = Router()
 const Domain = facSomethingRoute()
 
-const path = '/route'
-const pathId = '/route/:id'
+/* url-testing: http://localhost:3333/routes */
 
-Routes.post(path, Domain.createCon.bind(SomethingCon))
+const path = '/routes'
+const pathId = '/routes/:id'
 
-Routes.get(path, (req:Request, res:Response) => {
-  return Domain.findAllCon(req, res)
+Routes.post(path, async (req:Request, res:Response) => {
+  return await Domain.createCon(req, res)
 })
 
-Routes.get(pathId, (req:Request, res:Response) => {
-
+Routes.get(path, async (req:Request, res:Response) => {
+  return await Domain.findAllCon(req, res)
 })
 
-Routes.post(path, async (req: Request, res: Response) => {
-   
-  })
+Routes.get(pathId, async (req:Request, res:Response) => {
+  return await Domain.findOneCon(req, res)
+})
 
-Routes.put(pathId, async (req: Request, res: Response) => {
-   
-  })
 Routes.patch(pathId, async (req: Request, res: Response) => {
-   
+  return await Domain.updateOneCon(req, res)
   })
 
 Routes.delete(pathId, async (req: Request, res: Response) => {
-   
+  return await Domain.deleteOneCon(req, res)
+  })
+
+/* ----- EXTRAS ------ */
+
+Routes.post(path, async (req: Request, res: Response) => {
+  return await Domain.findAllCon(req, res)
+  })
+
+Routes.put(pathId, async (req: Request, res: Response) => {
+  return await Domain.findAllCon(req, res)
   })
 
   export { Routes }
