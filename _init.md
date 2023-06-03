@@ -5,7 +5,7 @@
 _package.json_
 
 ## Instalar as libs:
-2 - npm i mongoose express
+2 - npm i mongoose express dotenv
 
 ## Instalar as tipagens:
 3 - npm i typescript @types/express @types/node -D
