@@ -5,10 +5,10 @@
 _package.json_
 
 ## Instalar as libs:
-2 - npm i mongoose express dotenv
+2 - npm i mongoose express dotenv jest --save-dev
 
 ## Instalar as tipagens:
-3 - npm i typescript @types/express @types/node -D
+3 - npm i typescript @types/express @types/node @types/jest -D
 _deprecated -> mongodb provides its own types. @types/mongodb is no longer needed._
 
 ## Instalar o compilador automático:

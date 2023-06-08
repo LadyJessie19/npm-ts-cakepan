@@ -1,3 +1,19 @@
+import { yupHey } from "./yup";
+
+describe("yup.ts", () => {
+  it("Should return a funny phrase", () => {
+    const testingFunction = yupHey();
+    const result = "yupHey function done.";
+    expect(testingFunction).toHaveReturnedWith(result);
+  });
+});
+
+/* Run in the root folde the command "jest" and all the tests will be runned*/
+
+
+/* Another Jest Example */
+
+/* 
 import { createBook } from "./books";
 
 describe("Books.ts", () => {
@@ -12,3 +28,5 @@ describe("Books.ts", () => {
     expect(keys).toEqual(expectedKeys);
   });
 });
+
+*/
