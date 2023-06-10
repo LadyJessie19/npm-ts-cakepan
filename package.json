@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "tsnd src/app.ts",
-    "yup": "tsnd src/yup.ts"
+    "yup": "tsnd src/yup.ts",
+    "test": "jest",
+    "big":"node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",

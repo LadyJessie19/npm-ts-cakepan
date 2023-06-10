@@ -13,34 +13,34 @@ const Model = mongoose.model('Product', SomethingSchema)
 export { Model }
 
 /* 
-Schema Example:
+============= EXAMPLE SCHEMA - ALL POSSIBILITIES ============
 
-const ProductSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  code: {
-    type: String,
-    required: true
-  },
-  amount: {
-    type: Number,
-    default: 0,
-    min: 0
-  },
-  email: {
-    unique: true
-  }
-}, {
-  timestamps: true
-})
+const typesResume = new mongoose.Schema({
+  anySchemaKey: {
+    type: String - Number - Boolean - null - undefined,
+    required: true - false,
+    maxlength: 50,
+    minlength: 10,
+    max: 18,
+    min: 0,
+    default: "anySchemaValue" - 42 - false - null - undefined,
+    unique: true - false,
+    enum: ["pendente", "fazendo", "concluido"],
+    select: false - true
+  }, 
 
-const Product = mongoose.model('Product', ProductSchema)
+  relatedSchemaEntityParent: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ParentEntity' }],
 
+  relatedSchemaEntitySon: { type: mongoose.Schema.Types.ObjectId, ref: 'SonEntity' }
+  }, 
+  { timestamps: true }
+  );
+
+  const model = mongoose.model('Model', typesResume)
 */
 
 /* 
+=================== TYPESCRIPT EXAMPLE ====================
 
 export interface IUser extends Document {
   name: string;
@@ -63,10 +63,22 @@ const userSchema: Schema = new Schema(
 );
 
 const User = mongoose.model<IUser>("User", userSchema);
+*/
 
- status: {type: String, enum: ["pendente", "fazendo", "concluido"], required: true},
-    user: { type: Schema.Types.ObjectId, ref: "User" }
+/* 
+============ EXAMPLE PARENT ENTITY SCHEMA ================
 
+const authorSchema = new mongoose.Schema({
+  name: String,
+  books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Book' }],
+});
+
+============ EXAMPLE SON ENTITY SCHEMA ===================
+
+const bookSchema = new mongoose.Schema({
+  title: String,
+  author: { type: mongoose.Schema.Types.ObjectId, ref: 'Author' },
+});
 */
 
 // eof
